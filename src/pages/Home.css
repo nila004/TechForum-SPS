@@ -1,0 +1,118 @@
+/* 🌌 Fullscreen Background */
+.home-container {
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./bg.jpg") no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Centered Content */
+.home-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ✨ Animated Welcome Text */
+.welcome-text {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00f5ff, #0072ff, #00f5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 3s infinite alternate ease-in-out, slideFadeIn 1.5s ease-out;
+}
+
+.welcome-text span {
+  color: #00eaff;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.8), 0 0 30px rgba(0, 234, 255, 0.6);
+}
+
+/* 🪩 Hover pulse effect */
+.welcome-text:hover {
+  animation: textGlow 1s infinite alternate ease-in-out, pulse 1.5s infinite;
+}
+
+/* Subtext */
+.home-content p {
+  font-size: 1.2rem;
+  margin-top: 12px;
+  color: #e5e5e5;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 1s forwards;
+}
+
+/* 💫 Animations */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #0072ff, 0 0 30px #00f5ff;
+  }
+  100% {
+    text-shadow: 0 0 25px #00f5ff, 0 0 50px #0072ff, 0 0 70px #00eaff;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+  .welcome-text {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+}

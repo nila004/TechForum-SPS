@@ -1,0 +1,120 @@
+/* 🌌 EventsPage.css — Modern, Interactive & Responsive */
+
+.events-page {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0d052b, #1b1048);
+  color: white;
+  padding: 60px 80px;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  animation: fadeInPage 1.5s ease-in-out;
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+  background: url("./bg.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+/* ✨ Animated Watermark */
+.events-page::before {
+  content: "IEEE SPS KERALA CHAPTER";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: 5px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+  animation: watermarkFloat 10s ease-in-out infinite alternate;
+}
+
+/* 🌟 Title Styling */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #a991ff, #6a4fff, #a991ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  animation: slideFadeIn 1.2s ease-out;
+}
+
+/* 🧩 Responsive, Flexible Grid */
+.events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* 💫 Smooth scroll fade-up animation for cards */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌊 Watermark Floating Animation */
+@keyframes watermarkFloat {
+  from {
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+  to {
+    transform: translate(-50%, -52%) rotate(-22deg);
+  }
+}
+
+/* 🎬 Page fade-in effect */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 🌀 Title fade-slide animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 900px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  .events-page {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-page::before {
+    font-size: 3rem;
+  }
+}

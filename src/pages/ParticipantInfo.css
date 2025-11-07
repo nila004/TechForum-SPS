@@ -1,0 +1,80 @@
+.participant-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000, #e2e8f0);
+  padding: 40px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.participant-page h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #007bff, #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Table styling */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgb(8, 0, 0);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background: linear-gradient(90deg, #007bff, #00b4d8);
+  color: white;
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+  transition: 0.2s ease-in-out;
+}
+
+/* Empty message */
+p {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  .participant-page h2 {
+    font-size: 1.5rem;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #5b86e5, #36d1dc);
+  color: #0a0000;
+  font-family: "Poppins", sans-serif;
+}
