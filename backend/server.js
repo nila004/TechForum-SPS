@@ -3,9 +3,11 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import volunteerRoutes from "./routes/volunteerRoutes.js";
+import participantRoutes from "./routes/participantRoutes.js";
 
 dotenv.config();
 const app = express();
+
 
 app.use(cors());
 app.use(express.json());
@@ -18,6 +20,7 @@ mongoose
 
 // Routes
 app.use("/api/volunteer", volunteerRoutes);
+app.use("/api/participants", participantRoutes);
 
 // Start Server
 const PORT = process.env.PORT || 5000;
