@@ -21,7 +21,7 @@ function Eventd() {
         <button className="dash-btn" onClick={() => navigate("/participants")}>
           Participant Info
         </button>
-        <button className="dash-btn" onClick={() => navigate("/mess-details")}>
+        <button className="dash-btn" onClick={() => navigate("/messdetails")}>
           Mess Details
         </button>
         <button className="dash-btn" onClick={() => navigate("/bill-section")}>

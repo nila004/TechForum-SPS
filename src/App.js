@@ -8,6 +8,7 @@ import Eventd from "./pages/Eventd";
 import Participantd from "./pages/Participantd";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ParticipantInfo from "./pages/ParticipantInfo";
+import MessDetails from "./pages/MessDetails";
 import "./App.css";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/participants" element={<ParticipantInfo />} />
           <Route path="/register" element={<Register />} />
           <Route path="/eventlist" element={<EventsPage />} />
+          <Route path="/messdetails" element={<MessDetails />} />
         </Routes>
       </div>
     </Router>
