@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export const registerParticipant = async (req, res) => {
-  const { name, email, password, college, year, membership, foodPreference } = req.body;
+  const { name, email, password, college, semester,IEEEmember: membership, foodPreference,foodStatus} = req.body;
   try {
     const existing = await Participant.findOne({ email });
     if (existing) return res.status(400).json({ message: "Email already registered" });
@@ -14,9 +14,10 @@ export const registerParticipant = async (req, res) => {
       email,
       password: hashedPassword,
       college,
-      year,
-      membership,
+      semester,
+      IEEEmember: membership,
       foodPreference,
+      foodStatus: { day1: { lunch: false, snacks: false } },
     });
 
     await newParticipant.save();
