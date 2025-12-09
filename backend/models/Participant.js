@@ -6,13 +6,14 @@ const participantSchema = new mongoose.Schema({
   password: { type: String, required: true },
   College: { type: String, required: true },
   Semester: { type: String, required: true },
-  contactNumber: { type: String, required: true },
+  contactNumber: { type: String, required: true, unique: true },
 
   // IEEE Membership
   IEEEmember: {
     type: String,
     enum: ["Yes", "No"],
     required: true,
+    unique: true,
   },
   membershipId: {
     type: String,
